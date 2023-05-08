@@ -8,6 +8,14 @@ import { SignUpUser } from '../../store/auth';
 import { useDispatch, useSelector } from "react-redux";
 import CircularProgress from "@mui/material/CircularProgress";
 
+export const SignUpLink = styled('a')`
+    font-weight: 300 !important;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2D2D2D;
+    text-decoration: none;
+`
+
 
 const style = {
     position: 'absolute',
@@ -221,6 +229,9 @@ const SignUpForm = () => {
                         )}
                     />
                 </StyledFormGroup>
+                <SignUpLink sx={{ marginTop: '15px', fontSize: '15px', cursor: 'pointer' }} href="/">
+                        Already a user Login
+                </SignUpLink>
 
                 <StyledButton>
                     {isLoading ? <CircularProgress sx={{ color: "#fff" }} /> : "Sign Up"}
